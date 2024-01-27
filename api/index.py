@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import paldeck as paldeck
+import api.util.paldeck as paldeck
 
 app = Flask(__name__)
 pal = paldeck.paldeck()

@@ -10,7 +10,7 @@ class paldeck:
         return self.df.columns.to_list()
 
     def get_df_from_csv(self):
-        return pd.read_csv('source.csv', index_col=0)
+        return pd.read_csv('api/static/source.csv', index_col=0)
     
     def get_combi_list(self, target : str):
         rows, cols = (self.df == target).values.nonzero()

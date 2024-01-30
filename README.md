@@ -1,7 +1,11 @@
 # Palculator
-원하는 팰 선택하면 교배 조합 보여줍니다.
-추가하고 싶은 기능은 많은데, 게임 하느라 늦어질 것 같습니다.
+
+원하는 팰의 부모 조합 조회, 조합에 따른 자식 팰 조회, 등록된 팰에 따른 원하는 팰 가계 계산 등의 기능을 목표로 개발중입니다.
 
 Vercel 도메인에서 배포중입니다.
 
 https://palculator-three.vercel.app/
+
+## 개발환경 실행
+1. npm run dev
+2. npm start tailwind

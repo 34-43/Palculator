@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{{url_for('static',filename='css/output.css')}}" rel="stylesheet">
     <style>@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");</style>
+    <link rel="icon" href="./static/favicon.svg">
     <title>팰큐레이터 - 교배 계산기</title>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="./static/js/main.js"></script>
@@ -13,15 +14,18 @@
 
 <body class="w-[100vw] h-[100vh] font-Pret text-white">
     <div class="size-full flex-col bg-[#101D26]" />
-    <h2 class="font-bold text-3xl text-center py-8">팰큐레이터 - 교배 계산기</h2>
-    {% include 'nav.html' %}
-    <div class="flex-1">
-        {% if pagename == 'chart' %}{% include 'chart.html' %}
-        {% elif pagename == 'palbox' %}{% include 'palbox.html' %}
-        {% elif pagename == 'calc' %}{% include 'calc.html' %}
+    <div class="flex flex-row justify-center items-center gap-2">
+        <img src="./static/favicon.svg" class="size-8">
+        <h2 class="inline font-bold text-3xl text-center py-8">팰큐레이터 - 교배 계산기</h2>
+    </div>
+    {% include 'components/nav.html' %}
+    <div class="flex-1 z-10">
+        {% if pagename == 'chart' %}{% include 'body/chart.html' %}
+        {% elif pagename == 'palbox' %}{% include 'body/palbox.html' %}
+        {% elif pagename == 'calc' %}{% include 'body/calc.html' %}
         {% endif %}
     </div>
-    {% include 'footer.html' %}
+    {% include 'components/footer.html' %}
 </body>
 </html>
  

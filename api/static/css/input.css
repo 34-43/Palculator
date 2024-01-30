@@ -15,6 +15,7 @@
     min-width: 128px;
     height: 16px;
     text-align: left;
+    z-index: 10;
 }
 
 ::-webkit-scrollbar {

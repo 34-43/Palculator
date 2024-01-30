@@ -22,7 +22,7 @@ $(document).ready(function () {
     function makeParentCard(name) {
         return `
         <div class="block min-w-32 text-left z-10">
-        <img class="inline size-12 bg-zinc-900 rounded-full border-2 border-zinc-800" src='./static/portrait/${name}.jpg'>
+        <img class="inline size-12 bg-zinc-900 rounded-full border-2 border-zinc-800" src='/api/static/portrait/${name}.jpg' onerror="this.src='/static/portrait/${name}.jpg';">
         ${name}
         </div>`;
     }

@@ -6,28 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{{url_for('static',filename='css/output.css')}}" rel="stylesheet">
     <style>@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");</style>
-    <title>palculator</title>
+    <title>팰큐레이터 - 교배 계산기</title>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="./static/js/main.js"></script>
 </head>
 
 <body class="w-[100vw] h-[100vh] font-Pret text-white">
-    <div class="size-full bg-gray-900" />
-    <div class="size-full p-32 flex flex-col items-center">
-        <h2 class="p-8 font-bold">Palculator</h2>
-        <div class="flex flex-row">
-            <label for="combo-box" class="px-8">목표 팰</label>
-            <select id="combo-box" class="text-black">
-                {% for item in combo_list %}
-                    <option value="{{ item }}">{{ item }}</option>
-                {% endfor %}
-            </select>
-        </div>
-        <div class="big">
-            <div class="small text-blue-500">부</div>
-            <div class="small text-rose-500">모</div>
-        </div>
-        <ul id="dynamic-list" class="w-full h-[60vh] overflow-y-scroll"></ul>
+    <div class="size-full flex-col bg-[#101D26]" />
+    <h2 class="font-bold text-3xl text-center py-8">팰큐레이터 - 교배 계산기</h2>
+    {% include 'nav.html' %}
+    <div class="flex-1">
+        {% if pagename == 'chart' %}{% include 'chart.html' %}
+        {% elif pagename == 'palbox' %}{% include 'palbox.html' %}
+        {% elif pagename == 'calc' %}{% include 'calc.html' %}
+        {% endif %}
     </div>
+    {% include 'footer.html' %}
 </body>
 </html>
+ 

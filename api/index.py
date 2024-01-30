@@ -9,9 +9,13 @@ pal = paldeck.paldeck()
 
 static_combo_list = pal.get_pal_list()
 
+@app.route('/<pagename>')
+def page(pagename):
+    return render_template('index.html', combo_list=static_combo_list, pagename=pagename)
+
 @app.route('/')
 def index():
-    return render_template('index.html', combo_list=static_combo_list)
+    return page('chart')
 
 @app.route('/dynamic_list', methods=['GET'])
 def dynamic_list():

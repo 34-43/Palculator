@@ -1,0 +1,15 @@
+<div class="size-full flex flex-col items-center py-8">
+    <div class="flex flex-row">
+        <label for="combo-box" class="px-8">목표 팰</label>
+        <select id="combo-box" class="text-black">
+            {% for item in combo_list %}
+                <option value="{{ item }}">{{ item }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="big">
+        <div class="small text-blue-500">부</div>
+        <div class="small text-rose-500">모</div>
+    </div>
+    <ul id="dynamic-list" class="w-full h-[60vh] overflow-y-scroll"></ul>
+</div>

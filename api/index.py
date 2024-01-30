@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request
 import sys
-sys.path.append('/api/util')
-import util.paldeck as paldeck
+sys.path.append('api/util')
+
+import paldeck
 
 app = Flask(__name__)
 pal = paldeck.paldeck()
